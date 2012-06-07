@@ -1,0 +1,25 @@
+Vendor:     ATI Technologies Inc.
+Renderer:   ATI Radeon HD 4600 Series
+Version:    3.3.11631 Compatibility Profile Context
+GLSL:       3.30
+Version: 1.1          3.3.11631 Compatibility Profile Context
+Version: 2.0          3.3.11631 Compatibility Profile Context
+Version: 3.0          3.0.11631 Compatibility Profile Context
+Version: 3.0 FWD      3.0.11631 Core Profile Forward-Compatible Context
+Version: 3.1          3.1.11631 Compatibility Profile Context
+Version: 3.1 FWD      3.1.11631 Core Profile Forward-Compatible Context
+Version: 3.2 COMPAT   3.2.11631 Compatibility Profile Context
+Version: 3.2 CORE     3.2.11631 Core Profile Context
+Version: 3.2 FWD CORE 3.2.11631 Core Profile Forward-Compatible Context
+Version: 3.3 COMPAT   3.3.11631 Compatibility Profile Context
+Version: 3.3 CORE     3.3.11631 Core Profile Context
+Version: 3.3 FWD CORE 3.3.11631 Core Profile Forward-Compatible Context
+Version: 4.0 COMPAT   Can't create
+Version: 4.0 CORE     Can't create
+Version: 4.0 FWD CORE Can't create
+Version: 4.1 COMPAT   Can't create
+Version: 4.1 CORE     Can't create
+Version: 4.1 FWD CORE Can't create
+Version: 4.2 COMPAT   Can't create
+Version: 4.2 CORE     Can't create
+Version: 4.2 FWD CORE Can't create
