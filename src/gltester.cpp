@@ -10,7 +10,7 @@
 
 int versions[] = {
 	11,
-	20,
+	20, 21,
 	30, 31, 32, 33,
 	40, 41, 42
 };
@@ -25,7 +25,7 @@ void test(int major, int minor, bool core, bool fwc)
 	using namespace std;
 	const char* sprof;
 	if (atLeast32) sprof = (core ? (fwc ? "FWD CORE" : "CORE    ") : "COMPAT  ");
-	else if (atLeast3) sprof = (fwc ? "FWD     " : "        ");
+	else if (atLeast3) sprof = (fwc ? "FWD CORE" : "CORE    ");
 	else sprof = "        ";
 	
 	cout << "Version: " << major << "." << minor << " " << sprof << " ";
@@ -52,12 +52,12 @@ void test(int version)
 	int major = version/10;
 	int minor = version%10;
 	if ((major > 3) || (major == 3 && minor >= 2)) {
-		test(major, minor, false, false); // compat
-		test(major, minor, true, false); // core
 		test(major, minor, true, true); // core fwd
+		test(major, minor, true, false); // core
+		test(major, minor, false, false); // compat
 	} else if (major >= 3) {
-		test(major, minor,  /* ignored */ false, false); // regular
-		test(major, minor,  /* ignored */ false,  true); // fwd
+		test(major, minor,  /* ignored */ false,  true); // core fwd
+		test(major, minor,  /* ignored */ false, false); // core
 	} else {
 		test(major, minor, /* ignored */ false, /* ignored */ false); // regular
 	}
@@ -92,8 +92,8 @@ int main(int argc, char** argv)
 {
 	using namespace std;
 	freopen("/dev/null", "w", stderr); // let us silence GLFW's cries about failing contexts
-	const char* renderer = meta();
-	for (int i=0; i<sizeof(versions)/sizeof(*versions); ++i) {
+	// const char* renderer = meta();
+	for (unsigned i=0; i<sizeof(versions)/sizeof(*versions); ++i) {
 		test(versions[i]);
 	}
 	// TODO detect OS, get a standarised filename using the OS and renderer, allow to save to a file w/ a flag
