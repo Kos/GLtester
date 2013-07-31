@@ -12,7 +12,7 @@ int versions[] = {
 	11,
 	20, 21,
 	30, 31, 32, 33,
-	40, 41, 42
+	40, 41, 42, 43, 44
 };
 
 void test(int major, int minor, bool core, bool fwc)
